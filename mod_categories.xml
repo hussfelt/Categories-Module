@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="module" version="1.5.2">
+	<name>Categories</name>
+	<author>Henrik Hussfelt</author>
+	<creationDate>September 2008</creationDate>
+	<copyright>Copyright (C) 2008-2009 - Hussfelt Consulting AB.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>henrik@hussfelt.net</authorEmail>
+	<authorUrl>hussfelt.net</authorUrl>
+	<version>1.5.2</version>
+	<description>The Category Module shows a list of all Categories configured in your database. The Categories refer here to the Article Categorys only. If the parameter Show Unauthorised Links is set to No, the list will be limited to the Categories the user's access level permits them to see.</description>
+	<files>
+		<filename module="mod_categories">mod_categories.php</filename>
+		<filename>helper.php</filename>
+		<filename>tmpl/default.php</filename>
+		<filename>index.html</filename>
+		<filename>tmpl/index.html</filename>
+	</files>
+	<params>
+		<param name="id" type="section" default="1" label="Section" description="Section from which categories are listed"/>
+		<param name="count" type="text" default="5" label="Count" description="The number of items to display (default is 20)" />
+		<param name="show_count" type="list" default="1" label="Show article counter" description="If activated, a counter will display the number of articles in the category. (default is yes)">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+		<param name="show_count_text" type="list" default="1" label="Show article counter text" description="If activated, a text Item/Items will be added after the article counter, only used if article counter is activated. (default is yes)">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		<param name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="PARAMMODULECLASSSUFFIX" />
+		<param name="show_noauth" type="radio" default="0" label="Show UnAuthorized Links" description="TIPLINKS">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+	</params>
+	<params group="advanced">
+		<param name="cache" type="list" default="0" label="Caching" description="Select whether to cache the content of this module">
+			<option value="1">Use global</option>
+			<option value="0">No caching</option>
+		</param>
+		<param name="cache_time" type="text" default="900" label="Cache Time" description="The time before the module is recached" />
+	</params>
+</install>

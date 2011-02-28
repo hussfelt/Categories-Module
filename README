@@ -1,0 +1,9 @@
+There are already several different categories modules out there, in fact there is at least one that could be mistaken for this one. So what is the difference?
+
+This module is coded exactly as the sections module, no difference at all. That means that this module has the "Template overrides" possibility which the other modules are missing. It also has the feature to show an article counter beside the category link.
+
+Features
+* Copy of Joomla!s section module
+* Fully compatible with Joomla! 1.5 template overrides
+* Show categories from specific section
+* Show article counter for each category
